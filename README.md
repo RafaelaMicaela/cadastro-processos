@@ -21,7 +21,7 @@ A aplicação permite:
 
 - [Angular 15+](https://angular.io/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/) ou [PrimeNG](https://primeng.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - Reactive Forms (Formulário reativo)
 - Angular HttpClient
 - localStorage
