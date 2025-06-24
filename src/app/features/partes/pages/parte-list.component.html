@@ -1,12 +1,12 @@
 <div class="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 p-6">
   <div class="max-w-7xl mx-auto">
-    <!-- Header -->
+
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-gray-900 mb-2">Cadastro de Partes</h1>
+      <h1 class="text-3xl font-bold text-gray-900 mb-2"> Cadastro de Partes Interessadas </h1>
       <p class="text-gray-600">Gerencie as partes envolvidas nos processos</p>
     </div>
 
-    <!-- Form Section -->
+
     <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
       <div class="flex items-center gap-3 mb-4">
         <h2 class="text-xl font-semibold text-gray-900">
@@ -19,14 +19,14 @@
           Modo Edição
         </div>
       </div>
-      <app-parte-form 
-        [parteEditar]="parteSelecionada" 
+      <app-parte-form
+        [parteEditar]="parteSelecionada"
         (salvar)="salvar($event)"
         (cancelar)="cancelarEdicao()">
       </app-parte-form>
     </div>
 
-    <!-- Parts List Section -->
+
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
       <div class="px-6 py-4 border-b border-gray-200">
         <div class="flex items-center justify-between">
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <!-- Empty State -->
+
       <div *ngIf="partes.length === 0" class="text-center py-12">
         <div class="max-w-md mx-auto">
           <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <!-- Table -->
+
       <div *ngIf="partes.length > 0" class="overflow-x-auto">
         <table class="w-full">
           <thead class="bg-gray-50 border-b border-gray-200">
@@ -76,7 +76,7 @@
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
-            <tr *ngFor="let parte of partes; let i = index" 
+            <tr *ngFor="let parte of partes; let i = index"
                 class="hover:bg-gray-50 transition-colors duration-150"
                 [class.bg-gray-50]="i % 2 === 0"
                 [class.bg-yellow-50]="parteSelecionada?.id === parte.id">
@@ -99,8 +99,8 @@
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                 <div class="flex items-center gap-2">
-                  <button 
-                    (click)="editar(parte)" 
+                  <button
+                    (click)="editar(parte)"
                     class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
                     [disabled]="editando && parteSelecionada?.id !== parte.id"
                   >
@@ -109,8 +109,8 @@
                     </svg>
                     {{ parteSelecionada?.id === parte.id ? 'Editando...' : 'Editar' }}
                   </button>
-                  <button 
-                    (click)="remover(parte.id)" 
+                  <button
+                    (click)="remover(parte.id)"
                     class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200"
                     [disabled]="editando"
                   >
