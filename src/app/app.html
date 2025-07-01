@@ -1,1 +1,17 @@
-<router-outlet></router-outlet> 
+<nav class="bg-blue-600 text-white p-4 shadow-lg">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold">Sistema Jurídico</h1>
+    <div class="space-x-4">
+      <a routerLink="/partes" routerLinkActive="bg-blue-800 px-3 py-2 rounded" class="hover:bg-blue-700 px-3 py-2 rounded transition-colors">
+        👤 Cadastro de Partes
+      </a>
+      <a routerLink="/processos" routerLinkActive="bg-blue-800 px-3 py-2 rounded" class="hover:bg-blue-700 px-3 py-2 rounded transition-colors">
+        🔎 Consulta Processos
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="min-h-screen bg-gray-100">
+  <router-outlet></router-outlet>
+</main> 
