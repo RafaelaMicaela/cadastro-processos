@@ -1,0 +1,16 @@
+{
+  "/api/*": {
+    "target": "https://api-publica.datajud.cnj.jus.br",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "headers": {
+      "Authorization": "APIKey cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==",
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
+  }
+}
